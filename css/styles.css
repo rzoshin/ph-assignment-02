@@ -1,0 +1,66 @@
+/* Variable Declarations */
+:root {
+    --primary-color: #1A0B2E;
+    --secondary-color: #00FF88;
+
+    --background-color: #230E3D;
+    --card-color: rgba(53, 17, 101, 0.4);
+    
+    --text-size: 1rem;
+}
+
+/* Root Styles */
+body {
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+
+/* Custom Background Colors */
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-background {
+    background-color: var(--background-color);
+}
+
+.bg-card {
+    background-color: var(--card-color);
+}
+
+.secondary-background {
+    background-color: var(--secondary-color);
+}
+
+/* Typography Styles */
+.secondary-text {
+    color: var(--secondary-color);
+}
+
+.about-paragraph {
+    font-size: 1rem;
+    line-height: 20px;
+    color: white;
+    opacity: 0.8;
+}
+
+.card-paragraph {
+    font-size: 1rem;
+    line-height: 24px;
+    color: white;
+    opacity: 0.6
+}
+
+.card-header {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.section-header {
+    font-size: 3rem;
+    font-weight: 800;
+}
+button {
+    font-size: 1rem;
+    font-weight: 600;
+}
