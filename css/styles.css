@@ -35,11 +35,14 @@ body {
     background-color: rgba(53, 17, 101, 0.4);
     border-radius: 24px;
 }
-.secondary-background {
+.bg-secondary {
     background-color: var(--secondary-color);
 }
 
 /* Typography Styles */
+.primary-text {
+    color: var(--primary-color);
+}
 .secondary-text {
     color: var(--secondary-color);
 }
@@ -78,7 +81,6 @@ body {
 /* Button Styles */
 button {
     font-size: 1rem;
-    font-weight: 600;
 }
 
 .primary-btn {
@@ -135,4 +137,13 @@ iframe {
 #host .icon-wrapper {
     border-radius: 50%;
     border: 1px solid #533C72;
+}
+
+#new {
+    border-radius: 1000px;
+    box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
+}
+
+.secondary-btn {
+    border: 1px solid #00FF88;
 }
