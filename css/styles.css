@@ -25,7 +25,8 @@ body {
 }
 
 .bg-card {
-    background-color: var(--card-color);
+    background-color: rgba(53, 17, 101, 0.4);
+    border-radius: 40px;
 }
 
 .secondary-background {
@@ -54,7 +55,8 @@ body {
     font-size: 1rem;
     line-height: 24px;
     color: white;
-    opacity: 0.6
+    opacity: 0.6;
+    font-weight: 400;
 }
 
 .card-header {
@@ -93,4 +95,29 @@ button {
 
 header {
     border-bottom: 1px solid #412567;
+}
+
+#premium{
+    grid-area: premium;
+}
+#mobile {
+    grid-area: mobile;
+}
+#global {
+    grid-area: global;
+}
+#interview {
+    grid-area: interview;
+}
+#rich {
+    grid-area: rich;
+}
+
+.grid-container {
+    display: grid;
+    gap: 30px;
+    grid-template-areas:
+        "premium mobile mobile"
+        "premium global global"
+        "interview interview rich"
 }
