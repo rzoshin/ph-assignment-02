@@ -36,6 +36,11 @@ body {
 .secondary-text {
     color: var(--secondary-color);
 }
+.nav-text {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 120%;
+}
 
 .about-paragraph {
     font-size: 1rem;
@@ -60,7 +65,31 @@ body {
     font-size: 3rem;
     font-weight: 800;
 }
+
+/* Button Styles */
 button {
     font-size: 1rem;
     font-weight: 600;
+}
+
+.primary-btn {
+    background: linear-gradient(
+        to right,
+        #F7E93F 0%,
+        #FB09B4 50%,
+        #9100F8 100%
+    )
+}
+
+.logo-wave {
+    color: linear-gradient(
+        to right,
+        #F7E93F 0%,
+        #FB09B4 50%,
+        #9100F8 100%
+    )
+}
+
+header {
+    border-bottom: 1px solid #412567;
 }
