@@ -1,3 +1,6 @@
+/* Importing Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /* Variable Declarations */
 :root {
     --primary-color: #1A0B2E;
@@ -28,7 +31,10 @@ body {
     background-color: rgba(53, 17, 101, 0.4);
     border-radius: 40px;
 }
-
+.bg-card2 {
+    background-color: rgba(53, 17, 101, 0.4);
+    border-radius: 24px;
+}
 .secondary-background {
     background-color: var(--secondary-color);
 }
@@ -46,9 +52,8 @@ body {
 .about-paragraph {
     font-size: 1rem;
     line-height: 20px;
-    color: white;
-    opacity: 0.8;
-    font-weight: 800;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 700;
 }
 
 .card-paragraph {
@@ -60,13 +65,14 @@ body {
 }
 
 .card-header {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
+    line-height: auto;
 }
 
 .section-header {
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 /* Button Styles */
@@ -120,4 +126,8 @@ header {
         "premium mobile mobile"
         "premium global global"
         "interview interview rich"
+}
+
+iframe {
+    border-radius: 24px 24px 0 0;
 }
