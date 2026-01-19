@@ -8,8 +8,6 @@
 
     --background-color: #230E3D;
     --card-color: rgba(53, 17, 101, 0.4);
-    
-    --text-size: 1rem;
 }
 
 /* Root Styles */
@@ -27,16 +25,12 @@ body {
     background-color: var(--background-color);
 }
 
-.bg-card {
-    background-color: rgba(53, 17, 101, 0.4);
-    border-radius: 40px;
-}
-.bg-card2 {
-    background-color: rgba(53, 17, 101, 0.4);
-    border-radius: 24px;
-}
 .bg-secondary {
     background-color: var(--secondary-color);
+}
+
+.bg-card {
+    background-color: var(--card-color);
 }
 
 /* Typography Styles */
@@ -46,12 +40,8 @@ body {
 .secondary-text {
     color: var(--secondary-color);
 }
-.nav-text {
-    font-size: 1rem;
-    opacity: 0.9;
-    line-height: 120%;
-}
 
+/* Reusable Utility Styles */
 .about-paragraph {
     font-size: 1rem;
     line-height: 20px;
@@ -79,35 +69,36 @@ body {
 }
 
 /* Button Styles */
-button {
-    font-size: 1rem;
-}
-
 .primary-btn {
     background: linear-gradient(
-        to top right,
+        47.64deg,
         #F7E93F 0%,
         #FB09B4 50%,
         #9100F8 100%
     )
 }
 
-.logo-wave {
-    color: linear-gradient(
-        to right,
-        #F7E93F 0%,
-        #FB09B4 50%,
-        #9100F8 100%
-    )
+.secondary-btn {
+    border: 1px solid var(--secondary-color);
 }
 
+/* Section Specific Styles */
+
+/* Header Styles */
 header {
     border-bottom: 1px solid #412567;
 }
-#hamburger {
-    display: none;
+
+/* Banner Styles */
+.new {
+    border-radius: 1000px;
+    box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1A0B2E;
 }
 
+/* Features Styles */
 #premium{
     grid-area: premium;
 }
@@ -124,10 +115,6 @@ header {
     grid-area: rich;
 }
 
-/* #img-container{
-        width: 20%;
-        margin: 0 auto;
-    } */
 .grid-container {
     display: grid;
     gap: 30px;
@@ -137,58 +124,112 @@ header {
         "interview interview rich"
 }
 
+/* Episodes Styles */
 iframe {
     border-radius: 24px 24px 0 0;
 }
 
-#host .icon-wrapper {
+/* Host Styles */
+.icon-wrapper {
     border-radius: 50%;
     border: 1px solid #533C72;
 }
 
-#new {
-    border-radius: 1000px;
-    box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #1A0B2E;
-}
+/* Responsive Styles */
 
-.secondary-btn {
-    border: 1px solid #00FF88;
-}
-
+/* For Small Device */
 @media screen and (max-width: 576px) {
+    /* Common Styles */
+    #header,
+    .intro,
+    #about, 
+    #features,
+    #episodes,
+    #host
+    {
+        max-width: 100%;
+    }
+
+    #about, 
+    #features {
+        padding: 40px 20px;
+    }
+
+    .section-header {
+        font-size: 2rem;
+    }
+
+    .bg-card {
+        padding: 24px;
+    }
+
+    .episodes-card {
+        padding: 0px;
+    }
+
+    /* Header Styles */
+    #header {
+    padding: 16px 20px;
+    }
+
+    .logo-mobile {
+        width: 137px;
+        height: 20px;
+    }
+
+    nav,
+    .subscribe-btn {
+        display: none;
+    }
+
+    .hamburger-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Banner Styles */
     #banner {
         background-image: url(../assets/hero-bg.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         padding: 40px 20px;
     }
-    nav {
-        display: none;
+
+    .banner-title {
+        font-size: 40px;
     }
-    #subscribe {
-        display: none;
+
+    .hero-circle {
+        width: 200px;
+        height: 200px;
     }
-    #microphone {
+    .img-container {
+        margin-bottom: 24px;
+    }
+
+    .microphone {
         width: 47px;
         height: 70px;
     }
-    #title {
-        font-size: 40px;
-    }
-    #img-container{
-        width: 40%;
-        margin: 0 auto;
-    }
-    .about-paragraph{
+    
+    /* About Styles */
+    .about-paragraph {
         font-weight: 400;
     }
-    #stats {
+    
+    #about .secondary-text {
+    font-size: 2.5rem;
+    }
+
+    .about-stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .grid-container{
+    /* Features Styles */
+    .grid-container {
         grid-template-areas:
             "premium"
             "mobile"
@@ -196,92 +237,72 @@ iframe {
             "interview"
             "rich";
     }
-    #episodes-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
+
+    .featured {
+        font-size: 22px;
     }
 
-    #host-container {
+    /* Episodes Styles */
+    #episodes {
+        padding: 40px 20px 60px 20px;
+    } 
+
+    .episodes-title {
+        margin-bottom: 1.5rem; /* mb-6 */
+    }
+
+    .episodes-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .video {
+        font-size: 20px;
+    }
+
+    /* Host Styles */
+    #host {
+        padding-bottom: 40px;
+    }
+
+    .host-title {
+        margin-bottom: 1.5rem; /* mb-6 */
+    }
+
+    .host-name {
+        font-size: 1.5rem;
+    }
+
+    .host-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    #host-social-links {
+
+    .host-socials {
         justify-content: center;
     }
-    footer *{
-        margin: 0px;
-    }
+
+    /* Footer Styles */
     #footer {
         padding: 40px 20px;
         margin: 0 auto;
     }
+
     footer {
         background-size: 100% 100%;
-    
     }
-    
-    #about, #features {
-        max-width: 100%;
-        padding: 40px 20px;
-    }
-    #episodes {
-        max-width: 100%;
-        padding: 40px 20px 60px 20px;
-    } 
-    .section-header {
-        font-size: 2rem;
-    }
-    #host {
-        max-width: 100%;
-        padding-bottom: 40px;
-    }
-    #footer-logo {
+
+    .footer-logo {
         width: 219px;
         height: 32px;
     }
-    #footer-social-links {
+
+    .footer-links {
         flex-direction: column;
         gap: 16px;
         align-items: center;
     }
-    .featured {
-        font-size: 22px;
-    }
-    .video {
-        font-size: 20px;
-    }
-    #episodes-title, #host-title {
-        margin-bottom: 24px;
-    }
-    .bg-card {
-        padding: 24px;
-    }
-    #host-name {
-        font-size: 24px;
-    }
-   #stats h1{
-    font-size: 40px;
-   }
-   #logo-image{
-        width: 137px;
-        height: 20px;
-   }
-   #header{
-    max-width: 100%;
-    padding: 16px 20px;
-   }
-   #hamburger {
-    display: block;
-    color: white;
-    width: 24px;
-    height: 24px;
-   }
-   #hamburger i{
-    font-size: 20px;
-   }
-   #about-content div {
-    max-width: 100%;
-   }
 }
