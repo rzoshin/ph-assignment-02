@@ -43,10 +43,11 @@ body {
 
 /* Reusable Utility Styles */
 .about-paragraph {
+    font-family: "Inter", sans-serif;
     font-size: 1rem;
-    line-height: 20px;
+    line-height: 22px;
     color: rgba(255, 255, 255, 0.8);
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .card-paragraph {
@@ -69,10 +70,6 @@ body {
 }
 
 /* Button Styles */
-button {
-    cursor: pointer;
-}
-
 .primary-btn {
     background: linear-gradient(
         47.64deg,
@@ -87,6 +84,7 @@ button {
 }
 
 /* Section Specific Styles */
+
 /* Header Styles */
 header {
     border-bottom: 1px solid #412567;
@@ -106,6 +104,10 @@ header {
     color: #1A0B2E;
     z-index: 10;
 }
+
+/* .mobile-nav-text {
+        display: none;
+} */
 
 .microphone-container {
         width: 200px;
@@ -167,11 +169,6 @@ button {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-button:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(126, 126, 126, 0.15);
-}
-
 .wrapper:hover {
     transform: scale(1.19);
     transition: transform 0.3s ease;
@@ -181,6 +178,7 @@ button:hover {
 .new {
   pointer-events: none;
 }
+
 
 .icon {
   position: relative;
@@ -207,40 +205,28 @@ button:hover {
   animation: pulse 1.2s ease-out infinite;
 } 
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.7;
-  }
-  70% {
-    transform: scale(1.4);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.4);
-    opacity: 0;
-  }
-}
-
 .spotify-btn {
   box-shadow: 0 8px 30px rgba(251, 9, 180, 0.35);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .spotify-btn:hover {
+    cursor: pointer;
   box-shadow: 0 12px 40px rgba(251, 9, 180, 0.55);
   transform: translateY(-2px);
 }
 
-.subscribe-btn {
+.subscribe-btn2 {
   box-shadow: none;
   transition: box-shadow 0.3s ease;
 }
 
-.subscribe-btn:hover {
-  box-shadow:
-    0 0 24px rgba(0, 255, 136, 0.45),
-    inset 0 0 12px rgba(0, 255, 136, 0.25);
+.subscribe-btn2:hover {
+    cursor: pointer;
+    box-shadow:
+        0 0 24px rgba(0, 255, 136, 0.45),
+        inset 0 0 12px rgba(0, 255, 136, 0.25);
+    transform: translateY(-2px);
 }
 
 .section-header{
@@ -278,6 +264,21 @@ button:hover {
 @keyframes gradient-move {
   0% { background-position: 0% 0%; }
   100% { background-position: 100% 100%; }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
 }
 
 /* Responsive Styles */
@@ -324,18 +325,41 @@ button:hover {
         height: 20px;
     }
 
-    nav,
+    .nav-text,
     .subscribe-btn {
         display: none;
     }
+
     .hamburger-mobile {
         display: flex;
         align-self: center;
         color: white;
     }
+
     #hamburger {
         display: block;
-    }   
+    }  
+
+    .mobile-nav-text {
+        background-color: rgba(0, 0, 0, 0.402);
+        padding: 20px;
+        
+        transform: translateX(140%);
+        transition: 0.2s ease-in-out;
+        z-index: 1000;
+    }
+
+    #hamburger-icon:hover{
+        cursor: pointer;
+    }
+    
+    #hamburger-icon:hover + .mobile-nav-text{
+        transform: translateX(0);
+    }
+    .mobile-nav-text:hover {
+        transform: translateX(0);
+    }
+
     /* Banner Styles */
     #banner {
         background-image: url(../assets/Header.png);
@@ -371,9 +395,8 @@ button:hover {
     .new {
         font-size: 1rem;
         line-height: 19px;
-        /* left: 57%;
-        top: 5px; */
     }
+
     /* About Styles */
     .about-paragraph {
         font-weight: 400;
