@@ -546,3 +546,53 @@ iframe {
         gap: 16px;
     }
 }
+
+/* For Medium Device from 576px to 992px width*/
+@media screen and (min-width: 576px) and (max-width: 992px) {
+
+    #banner {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    footer {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    #header {
+        max-width: 100%;
+        justify-content: space-around;
+    }
+    .about-stats-grid{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .episodes-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    /* Features Styles */
+    .grid-container {
+        grid-template-areas:
+            "premium mobile"
+            "premium global"
+            "interview rich";
+        gap: 20px;
+    }
+}
+
+/* For Large Device from 992px and above width*/
+@media screen and (min-width: 992px) {
+    #banner {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    footer {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+}
