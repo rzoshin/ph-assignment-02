@@ -89,13 +89,32 @@ header {
     border-bottom: 1px solid #412567;
 }
 
+
+#hamburger {
+        width: 24px;
+        height: 24px;
+}
+
 /* Banner Styles */
 .new {
-    border-radius: 1000px;
     box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
     font-size: 1.125rem;
     font-weight: 600;
+    line-height: 22px;
     color: #1A0B2E;
+    z-index: 10;
+}
+
+.microphone-container {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.microphone {
+    z-index: 12;
 }
 
 /* Features Styles */
@@ -135,6 +154,42 @@ iframe {
     border: 1px solid #533C72;
 }
 
+/* Animation */
+.icon {
+  position: relative;
+  z-index: 1;
+}
+
+.icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color:#FB09B4;
+  z-index: -1;
+  opacity: 0;
+}
+
+.icon:hover::after {
+  animation: pulse 1.2s ease-out infinite;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
 /* Responsive Styles */
 
 /* For Small Device */
@@ -145,7 +200,8 @@ iframe {
     #about, 
     #features,
     #episodes,
-    #host
+    #host,
+    #footer
     {
         max-width: 100%;
     }
@@ -169,7 +225,8 @@ iframe {
 
     /* Header Styles */
     #header {
-    padding: 16px 20px;
+        padding: 16px 20px;
+        align-items: center;
     }
 
     .logo-mobile {
@@ -181,21 +238,20 @@ iframe {
     .subscribe-btn {
         display: none;
     }
-
     .hamburger-mobile {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        align-self: center;
         color: white;
-        width: 24px;
-        height: 24px;
     }
-
+    #hamburger {
+        display: block;
+    }   
     /* Banner Styles */
     #banner {
-        background-image: url(../assets/hero-bg.png);
+        background-image: url(../assets/Header.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        background-color: #1A0B2E;
         padding: 40px 20px;
     }
 
@@ -211,11 +267,21 @@ iframe {
         margin-bottom: 24px;
     }
 
+    .microphone-container {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .microphone {
         width: 47px;
         height: 70px;
     }
-    
+    .new {
+        font-size: 1rem;
+        line-height: 19px;
+    }
     /* About Styles */
     .about-paragraph {
         font-weight: 400;
@@ -227,6 +293,12 @@ iframe {
 
     .about-stats-grid {
         grid-template-columns: repeat(2, 1fr);
+        padding-top: 40px;
+        gap: 40px;
+    }
+
+    .about-text {
+        margin-bottom: 40px;
     }
     /* Features Styles */
     .grid-container {
@@ -236,6 +308,7 @@ iframe {
             "global"
             "interview"
             "rich";
+        gap: 16px;
     }
 
     .featured {
@@ -265,6 +338,8 @@ iframe {
     /* Host Styles */
     #host {
         padding-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .host-title {
@@ -288,11 +363,13 @@ iframe {
     /* Footer Styles */
     #footer {
         padding: 40px 20px;
-        margin: 0 auto;
+        gap: 24px;
     }
 
     footer {
+        background-image: url(../assets/Footer.png);
         background-size: 100% 100%;
+        background-repeat: no-repeat;
     }
 
     .footer-logo {
@@ -304,5 +381,8 @@ iframe {
         flex-direction: column;
         gap: 16px;
         align-items: center;
+    }
+    .footer-mobile {
+        gap: 16px;
     }
 }

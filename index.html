@@ -15,7 +15,7 @@
 <body>
     <!-- Header Section -->
     <header class="bg-primary">
-        <div id="header" class="max-w-[75%] h-[92px] mx-auto flex justify-between items-center">
+        <div id="header" class="max-w-[75%] py-4 mx-auto flex justify-between items-center">
             <div>
                 <img class="logo-mobile" src="./assets/TechWave.png" alt="logo-text">
             </div>
@@ -30,8 +30,8 @@
                 <span class="font-semibold"> Subscribe </span>
                 <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
             </button>
-            <div class="hamburger-mobile hidden justify-center items-center">
-                <i class="fa-solid fa-bars"></i>
+            <div class="hamburger-mobile hidden">
+                <img src="./assets/Vector-2.png" alt="hamburger-icon">
             </div>
         </div>
     </header>
@@ -40,9 +40,11 @@
     <section id="banner" class="bg-[url('./assets/hero-bg.png')] bg-no-repeat bg-cover py-[101px]">
         <div class="img-container mb-10 mx-auto max-w-full">
             <div class="mx-auto flex justify-center items-center relative">
-                <img class="hero-circle" src="./assets/hero-circle.png" alt="">
-                <img class="microphone m-auto absolute" src="./assets/microphone.png" alt="">
-                <div class="new bg-secondary py-2 px-4 absolute top-2.5 left-[54.5%]">NEW</div>
+                <div class="icon">
+                    <img class="hero-circle" src="./assets/hero-circle.png" alt="">
+                </div>
+                <div class="microphone-container m-auto absolute"> <img class="microphone " src="./assets/microphone.png" alt=""> </div>
+                <div class="new bg-secondary py-2 px-4 absolute top-2.5 left-[54.5%] rounded-[1000px]">NEW</div>
             </div>
         </div>
         <div class="text-center">
@@ -60,18 +62,19 @@
         <!-- About Section -->
         <section class="bg-primary">
             <div id="about" class="max-w-[75%] mx-auto pt-[50px] pb-30">
-                <div class="mb-20 text-center">
+                <div class="about-text mb-20 text-center">
                     <h1 class="section-header mb-4">About The Podcast</h1>
-                    <div class="intro about-paragraph max-w-[58%] mx-auto pb-20">
+                    <div class="intro about-paragraph max-w-[58%] mx-auto">
                         <p>
-                            TechWave is your go-to podcast for staying ahead in the fast-paced world of technology.
+                            TechWave is your go-to podcast for staying ahead in the fast-paced world of technology. <br>
                             We break down complex topics into digestible insights, explore productivity strategies that actually work,
-                            and share stories of personal growth from industry leaders. <br> <br>
+                            and share stories of personal growth from industry leaders. <br><br>
                         
                             Join thousands of young professionals and tech enthusiasts who start their day with TechWave.
                         </p>
                     </div>
-                <div class="about-stats-grid uppercase grid grid-cols-4 gap-20 pt-20 border-t border-white/10 max-w-[576px]:grid-cols-2">
+                </div>
+                <div class="about-stats-grid uppercase grid grid-cols-4 gap-20 pt-20 border-t border-white/10">
                     <div class="flex flex-col gap-4"><h1 class="text-5xl font-black secondary-text text-center tracking-wider">150K+</h1><p class="about-paragraph text-center">Monthly Listeners</p></div>
                     <div class="flex flex-col gap-4"><h1 class="text-5xl font-black secondary-text text-center tracking-wider">200+</h1> <p class="about-paragraph text-center">Episodes Published</p></div>
                     <div class="flex flex-col gap-4"><h1 class="text-5xl font-black secondary-text text-center tracking-wider">4.9★</h1> <p class="about-paragraph text-center">Average Rating</p></div>
@@ -121,7 +124,7 @@
                 <div class="episodes-container grid grid-cols-3 grid-rows-1 justify-between gap-[30px]">
                     <div class="w-[380px] bg-card episodes-card rounded-3xl">
                         <iframe width="100%" height="214" src="https://www.youtube.com/embed/Nm0pUnNrKy8?si=IJed2WDbm0LrrzMJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <div class="space-y-4 p-6">
+                        <div class="space-y-3 p-6">
                             <h1 class="card-header video"> The Future of AI in Everyday Life</h1>
                             <p class="card-paragraph">Exploring how artificial intelligence is transforming our daily routines and what to expect in the next decade.</p>
                             <div class="secondary-text flex items-center gap-1.5"> <img class="inline" src="./assets/clock.png" alt=""> <span class="font-semibold"> 42 min </span></div>
@@ -129,7 +132,7 @@
                     </div>
                     <div class="w-[380px] bg-card episodes-card rounded-3xl">
                         <iframe width="100%" height="214" src="https://www.youtube.com/embed/9E2SdLD3Kpc?si=uViNyFR96xVMma0f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <div class="space-y-4 p-6">
+                        <div class="space-y-3 p-6">
                             <h1 class="card-header video">Building Better Habits for Remote Work</h1>
                             <p class="card-paragraph">Practical strategies for staying productive and maintaining work-life balance in a remote environment.</p>
                             <div class="secondary-text flex items-center gap-1.5"> <img class="inline" src="./assets/clock.png" alt=""> <span class="font-semibold"> 35 min </span></div>
@@ -137,7 +140,7 @@
                     </div>
                     <div class="w-[380px] bg-card episodes-card rounded-3xl">
                         <iframe width="100%" height="214" src="https://www.youtube.com/embed/IZ_W8NufP1Y?si=PFd0CwMNekEuPus8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <div class="space-y-4 p-6">
+                        <div class="space-y-3 p-6">
                             <h1 class="card-header video">Career Growth in Tech: A Roadmap</h1>
                             <p class="card-paragraph"> Expert advice on navigating your tech career from junior developer to senior leadership roles.</p>
                             <div class="secondary-text flex items-center gap-1.5"> <img class="inline" src="./assets/clock.png" alt=""> <span class="font-semibold"> 51 min </span></div>
@@ -173,21 +176,21 @@
         </section>
     </main>
     <!-- Footer Section -->
-    <footer class="bg-[url('./assets/footer-bg.png')] bg-no-repeat bg-cover">
-        <div id="footer" class="max-w-[75%] mx-auto flex flex-col gap-8 items-center py-30">
+    <footer class="bg-[url('./assets/footer-bg.png')] bg-no-repeat bg-cover flex justify-center">
+        <div id="footer" class="max-w-[75%] mx-auto flex flex-col gap-8 items-center justify-center py-30">
             <img class="footer-logo w-[410px] h-15"src="./assets/TechWave-2.png" alt="footer-text">
             <div class="footer-links flex gap-10 text-white/60 font-medium">
-                <div class="flex gap-10">
+                <div class="footer-mobile flex gap-10">
                     <div class="flex gap-2"><div class="w-6 h-6 flex justify-center items-center"> <img  src="./assets/spotify.png" alt="spotify-icon"></div><span>Spotify</span></div>
                     <div class="flex gap-2"><div class="w-6 h-6 flex justify-center items-center"> <img src="./assets/apple-podcast.png" alt="apple-podcast-icon"></div><span>Apple Podcasts</span></div>
                 </div>
-                <div class="flex gap-10">
+                <div class="footer-mobile flex gap-10">
                     <div class="flex gap-2"><div class="w-6 h-6 flex justify-center items-center"> <img src="./assets/youtube-podcast.png" alt="youtube-icon"></div><span>Youtube</span></div>
                     <div class="flex gap-2"><div class="w-6 h-6 flex justify-center items-center"> <img src="./assets/twitter.png" alt="twitter-icon"></div><span>Twitter</span></div>
                 </div>  
             </div>
             <div>
-                <p class="text-white/60"> &copy; 2026 TechWave Podcast. All rights reserved.</p>
+                <p class="text-white/60 font-regular"> &copy; 2026 TechWave Podcast. All rights reserved.</p>
             </div>
         </div>
     </footer>
