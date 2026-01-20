@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* Importing Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
@@ -90,7 +94,7 @@ header {
     border-bottom: 1px solid #412567;
 }
 
-#hamburger {
+#hamburger-icon {
         width: 24px;
         height: 24px;
 }
@@ -104,10 +108,6 @@ header {
     color: #1A0B2E;
     z-index: 10;
 }
-
-/* .mobile-nav-text {
-        display: none;
-} */
 
 .microphone-container {
         width: 200px;
@@ -158,27 +158,30 @@ iframe {
     border: 1px solid #533C72;
 }
 
-/* Animation */
-
-.episodes-card:hover{
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
-button {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.wrapper:hover {
-    transform: scale(1.19);
-    transition: transform 0.3s ease;
-}
+/* =========================================================
+   INTERACTION CONTROL — DECORATIVE ELEMENTS
+   ---------------------------------------------------------
+   ========================================================= */
 
 .microphone-container,
 .new {
   pointer-events: none;
 }
 
+/* =========================================================
+   ANIMATIONS & INTERACTIONS — TechWave
+   =========================================================
+   This file contains all hover, transition, and keyframe
+   animations used across the website.
+   Animations are grouped by section for clarity.
+   ========================================================= */
+
+/* =========================================================
+   BANNER / HERO SECTION — PULSE ANIMATION
+   ---------------------------------------------------------
+   Pulsating circular glow behind the hero image to draw
+   user attention to the podcast centerpiece.
+   ========================================================= */
 
 .icon {
   position: relative;
@@ -205,6 +208,53 @@ button {
   animation: pulse 1.2s ease-out infinite;
 } 
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   BANNER TITLE — GRADIENT TEXT ANIMATION
+   ---------------------------------------------------------
+   Animated gradient sweep on hover for brand emphasis
+   without sacrificing readability.
+   ========================================================= */
+
+.banner-title:hover {
+    animation: gradient-move 3s ease-in alternate infinite;
+    background: linear-gradient(
+    to right,
+    #F7E93F 0%,
+    #FB09B4 50%,
+    #9100F8 100%
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* =========================================================
+   CTA BUTTONS — SPOTIFY & SUBSCRIBE
+   ---------------------------------------------------------
+   Elevation and glow effects to enhance call-to-action
+   visibility and affordance.
+   ========================================================= */
+
 .spotify-btn {
   box-shadow: 0 8px 30px rgba(251, 9, 180, 0.35);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -229,6 +279,13 @@ button {
     transform: translateY(-2px);
 }
 
+/* =========================================================
+   SECTION HEADERS — UNDERLINE REVEAL
+   ---------------------------------------------------------
+   Animated underline on hover to emphasize section titles
+   and improve content scannability.
+   ========================================================= */
+
 .section-header{
   position: relative;
 }
@@ -248,42 +305,31 @@ button {
   width: 100%;
 }
 
-.banner-title:hover {
-    animation: gradient-move 3s ease-in alternate infinite;
-    background: linear-gradient(
-    to right,
-    #F7E93F 0%,
-    #FB09B4 50%,
-    #9100F8 100%
-  );
-  background-size: 200% 200%;
-  background-clip: text;
-  color: transparent;
+/* =========================================================
+   EPISODES SECTION — CARD HOVER EFFECT
+   ---------------------------------------------------------
+   Slight scale-up on hover to indicate interactivity
+   while maintaining layout stability.
+   ========================================================= */
+.episodes-card:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
-@keyframes gradient-move {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 100% 100%; }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.7;
-  }
-  70% {
-    transform: scale(1.4);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.4);
-    opacity: 0;
-  }
+/* =========================================================
+   HOST SECTION — PROFILE IMAGE HOVER
+   ---------------------------------------------------------
+   Enlarges host image slightly on hover to add warmth
+   and visual engagement.
+   ========================================================= */
+.wrapper:hover {
+    transform: scale(1.19);
+    transition: transform 0.3s ease;
 }
 
 /* Responsive Styles */
 
-/* For Small Device */
+/* For Small Device up to 576px width*/
 @media screen and (max-width: 576px) {
     /* Common Styles */
     #header,
@@ -365,7 +411,6 @@ button {
         background-image: url(../assets/Header.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        background-color: #1A0B2E;
         padding: 40px 20px;
     }
 
