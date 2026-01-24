@@ -202,9 +202,6 @@ iframe {
   background-color:#533C72;
   z-index: 1;
   opacity: 0;
-}
-
-.animation:hover .icon::after { 
   animation: pulse 1.2s ease-out infinite;
 } 
 
@@ -230,10 +227,10 @@ iframe {
    without sacrificing readability.
    ========================================================= */
 
-.banner-title:hover {
+.wave{
     animation: gradient-move 3s ease-in alternate infinite;
     background: linear-gradient(
-    to right,
+    to bottom,
     #F7E93F 0%,
     #FB09B4 50%,
     #9100F8 100%
@@ -261,7 +258,7 @@ iframe {
 }
 
 .spotify-btn:hover {
-    cursor: pointer;
+  cursor: pointer;
   box-shadow: 0 12px 40px rgba(251, 9, 180, 0.55);
   transform: translateY(-2px);
 }
@@ -389,9 +386,15 @@ iframe {
     .mobile-nav-text {
         background-color: rgba(0, 0, 0, 0.402);
         padding: 20px;
+        border-bottom: 1px solid;
+        border-left: 1px solid;
+        border-image: linear-gradient(
+        #F7E93F 0%,
+        #FB09B4 50%,
+        #9100F8 100%) 1;
         
-        transform: translateX(140%);
-        transition: 0.2s ease-in-out;
+        transform: translateY(-140%);
+        transition: 0.4s ease-out;
         z-index: 1000;
     }
 
@@ -400,10 +403,10 @@ iframe {
     }
     
     #hamburger-icon:hover + .mobile-nav-text{
-        transform: translateX(0);
+        transform: translateY(0);
     }
     .mobile-nav-text:hover {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     /* Banner Styles */
